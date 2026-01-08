@@ -1,0 +1,6 @@
+word=input("enter a word")
+print(word[::-1])
+print(word[0:2:])
+sentence=input("enter a sentence")
+print(sentence.replace("love","hate"))
+print(sentence.replace("hate","love"))
