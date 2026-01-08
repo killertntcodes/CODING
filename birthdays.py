@@ -1,0 +1,6 @@
+xxxtentacion=("23/1/1998")
+juice_wrld=("2/12/1998")
+lil_peep=("1/11/1996")
+king_von=("9/8/1994")
+pop_smoke=("20/7/1999")
+print("xxxtentacion:",xxxtentacion,"juice wrld:",juice_wrld,"lil peep:",lil_peep,"king von:",king_von,"pop smoke:",pop_smoke)
