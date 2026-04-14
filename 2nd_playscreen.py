@@ -1,6 +1,6 @@
 import pygame
 pygame.init()
-screen_width, screen_height = (500, 500)
+screen_width, screen_height = (900, 700)
 display_suface= pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Image to Screen")
 background_img = pygame.transform.scale(pygame.image.load('bg.png').convert(), (screen_width, screen_height))
