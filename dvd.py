@@ -1,5 +1,5 @@
 import pygame
-
+import random
 def main():
     pygame.init()
     screen_width, screen_height = 1000, 1000
