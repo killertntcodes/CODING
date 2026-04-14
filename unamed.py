@@ -4,6 +4,8 @@ import random
 def main():
     pygame.init()
 
+    bg_color = pygame.Color('black')
+
     # Screen setup
     screen_width, screen_height = 950, 700
     screen = pygame.display.set_mode((screen_width, screen_height))
@@ -38,10 +40,6 @@ def main():
     pygame.event.post(pygame.event.Event(pygame.USEREVENT + 1))
 
 
-    def bgchange():
-        global bg_color
-        bg_color = random.choice([pygame.Color('cyan'), pygame.Color('magenta'), pygame.Color('orange'), pygame.Color('purple'), pygame.Color('pink')])
-
     while running:
         # Quit event
         for event in pygame.event.get():
@@ -53,13 +51,14 @@ def main():
         if x <= 0 or x >= screen_width - sprite_width:
             dx *= -1
             current_color = random.choice(colors)
-            bgchange()
+            bg_color = random.choice(colors2)
         
 
         if y <= 0 or y >= screen_height - sprite_height:
             dy *= -1
             current_color = random.choice(colors)
-            bgchange()
+            bg_color = random.choice(colors2)
+            
 
         screen.fill(bg_color)
         pygame.draw.rect(screen, current_color, (x, y, sprite_width, sprite_height))
@@ -68,7 +67,6 @@ def main():
         clock.tick(60)
 
     pygame.quit()
-    bgchange()
 
 if __name__ == "__main__":
     main()
