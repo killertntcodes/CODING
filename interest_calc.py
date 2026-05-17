@@ -1,0 +1,30 @@
+from tkinter import *
+root = Tk()
+root.title("Interest Calculator")
+root.geometry("400x400")
+def calculate_interest():
+    try:
+        principal = float(entry_principal.get())
+        rate = float(entry_rate.get())
+        time = float(entry_time.get())
+        interest = (principal * rate * time) / 100
+        label_result.config(text=f"Interest: {interest:.2f}")
+    except ValueError:
+        label_result.config(text="Please enter valid numbers.")
+label_principal = Label(root, text="Principal Amount:")
+entry_principal = Entry(root)
+label_rate = Label(root, text="Annual Interest Rate (%):")
+entry_rate = Entry(root)
+label_time = Label(root, text="Time (years):")
+entry_time = Entry(root)
+button_calculate = Button(root, text="Calculate Interest", command=calculate_interest)
+label_result = Label(root, text="Interest: ")
+label_principal.pack(pady=5)
+entry_principal.pack(pady=5)
+label_rate.pack(pady=5)
+entry_rate.pack(pady=5)
+label_time.pack(pady=5)
+entry_time.pack(pady=5)
+button_calculate.pack(pady=10)
+label_result.pack(pady=5)
+root.mainloop()
